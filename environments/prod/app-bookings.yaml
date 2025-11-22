@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: 'https://github.com/CCAssignment-25/tickbazaar-cd.git'
     path: 'charts/bookings'
-    targetRevision: HEAD
+    targetRevision: main
     helm:
       valueFiles:
       - values.yaml
