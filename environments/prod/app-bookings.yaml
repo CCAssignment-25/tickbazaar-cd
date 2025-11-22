@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/<your-org>/gitops-repo.git'
+    repoURL: 'https://github.com/CCAssignment-25/tickbazaar-cd.git'
     path: 'charts/bookings'
     targetRevision: HEAD
     helm:
