@@ -1,13 +1,13 @@
 replicaCount: 2
 
 image:
-  repository: asia-south1-docker.pkg.dev/focused-zephyr-478716-n0/cc-assignment/booking-svc
+  repository: asia-south1-docker.pkg.dev/focused-zephyr-478716-n0/cc-assignment/payment-svc
   tag: "v1"
   pullPolicy: IfNotPresent
 
 service:
   type: ClusterIP
-  port: 4004
+  port: 4005
 
 resources:
   requests:
@@ -25,15 +25,15 @@ hpa:
 
 istio:
   enabled: true
-  prefix: /booking
+  prefix: /payment
   gateway: istio-system/public-gateway
 
 
 env: 
-  - "PORT": "4004"
-  - "SEAT_SERVICE_URL": http://seat-svc:4003
+  - "PORT": "4005"
+  - "BOOKING_SERVICE_URL": http://booking-svc:4004
   - "LOKI_URL": http://loki-gateway.loki.svc.cluster.local
 
 secret_env:
-  - "BOOKING_DATABASE_URL": "postgresql://postgres:$a+GF*eux<y>0(-{@34.93.218.184:5432/ticketbazaar_bookings?schema=public"
+  - "PAYMENT_DATABASE_URL": "postgresql://postgres:$a+GF*eux<y>0(-{@34.93.218.184:5432/ticketbazaar_payments?schema=public"
   - "INTERNAL_API_KEY": "yfbryggg4hg78y84hgj49gu4ugr3"

@@ -1,13 +1,13 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: bookings-app
+  name: seat-app
   namespace: argocd
 spec:
   project: default
   source:
     repoURL: 'https://github.com/CCAssignment-25/tickbazaar-cd.git'
-    path: 'charts/bookings'
+    path: 'charts/seat'
     targetRevision: main
     helm:
       valueFiles:
@@ -16,7 +16,7 @@ spec:
         image:
           tag: v1
         hpa:
-          enabled: true
+          enabled: false
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: apps
