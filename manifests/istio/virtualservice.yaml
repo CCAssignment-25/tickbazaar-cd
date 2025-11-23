@@ -12,9 +12,42 @@ spec:
   
   - match:
     - uri:
-        prefix: /bookings
+        prefix: /booking
     route:
     - destination:
-        host: bookings.apps.svc.cluster.local
+        host: booking-svc.apps.svc.cluster.local
         port:
-          number: 8080
+          number: 4004
+  - match:
+    - uri:
+        prefix: /movie
+    route:
+    - destination:
+        host: movie-svc.apps.svc.cluster.local
+        port:
+          number: 4001
+  - match:
+    - uri:
+        prefix: /payment
+    route:
+    - destination:
+        host: payment-svc.apps.svc.cluster.local
+        port:
+          number: 4005
+  - match:
+    - uri:
+        prefix: /seat
+    route:
+    - destination:
+        host: seat-svc.apps.svc.cluster.local
+        port:
+          number: 4003
+  - match:
+    - uri:
+        prefix: /theatre
+    route:
+    - destination:
+        host: theatre-svc.apps.svc.cluster.local
+        port:
+          number: 4002
+
