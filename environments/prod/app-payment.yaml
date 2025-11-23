@@ -1,13 +1,13 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: bookings-app
+  name: payment-app
   namespace: argocd
 spec:
   project: default
   source:
     repoURL: 'https://github.com/CCAssignment-25/tickbazaar-cd.git'
-    path: 'charts/bookings'
+    path: 'charts/payment'
     targetRevision: main
     helm:
       valueFiles:
