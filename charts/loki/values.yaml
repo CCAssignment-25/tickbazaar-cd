@@ -47,12 +47,12 @@ serviceAccount:
 deploymentMode: Distributed
 
 ingester:
- replicas: 3
+ replicas: 2
  zoneAwareReplication:
   enabled: false
 
 querier:
- replicas: 3
+ replicas: 2
  maxUnavailable: 2
 
 queryFrontend:
@@ -63,7 +63,7 @@ queryScheduler:
  replicas: 2
 
 distributor:
- replicas: 3
+ replicas: 2
  maxUnavailable: 2
  
 compactor:
