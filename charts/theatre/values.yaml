@@ -27,8 +27,7 @@ istio:
   enabled: true
   prefix: /theatre
   gateway: istio-system/public-gateway
-
-
+  
 env: 
   "PORT": "4002"
   "LOKI_URL": http://loki-gateway.loki.svc.cluster.local
