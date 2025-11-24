@@ -15,7 +15,7 @@ spec:
         prefix: /booking
     route:
     - destination:
-        host: booking-svc.apps.svc.cluster.local
+        host: bookings-app.apps.svc.cluster.local
         port:
           number: 4004
   - match:
@@ -23,7 +23,7 @@ spec:
         prefix: /movie
     route:
     - destination:
-        host: movie-svc.apps.svc.cluster.local
+        host: movie-app.apps.svc.cluster.local
         port:
           number: 4001
   - match:
@@ -31,7 +31,7 @@ spec:
         prefix: /payment
     route:
     - destination:
-        host: payment-svc.apps.svc.cluster.local
+        host: payment-app.apps.svc.cluster.local
         port:
           number: 4005
   - match:
@@ -39,7 +39,7 @@ spec:
         prefix: /seat
     route:
     - destination:
-        host: seat-svc.apps.svc.cluster.local
+        host: seat-app.apps.svc.cluster.local
         port:
           number: 4003
   - match:
@@ -47,7 +47,7 @@ spec:
         prefix: /theatre
     route:
     - destination:
-        host: theatre-svc.apps.svc.cluster.local
+        host: theatre-app.apps.svc.cluster.local
         port:
           number: 4002
 
