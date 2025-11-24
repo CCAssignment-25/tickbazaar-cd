@@ -1,9 +1,6 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  annotations:
-    checksum/config: {{ include (print $.Template.BasePath "/config-map.yaml") . | sha256sum }}
-    checksum/secret: {{ include (print $.Template.BasePath "/secrets.yaml") . | sha256sum }}
   name: {{ include "bookings.fullname" . }}
   labels:
     app: {{ include "bookings.name" . }}
@@ -14,6 +11,9 @@ spec:
       app: {{ include "bookings.name" . }}
   template:
     metadata:
+      annotations:
+        checksum/config: {{ include (print $.Template.BasePath "/config-map.yaml") . | sha256sum }}
+        checksum/secret: {{ include (print $.Template.BasePath "/secrets.yaml") . | sha256sum }}
       labels:
         app: {{ include "bookings.name" . }}
     spec:
