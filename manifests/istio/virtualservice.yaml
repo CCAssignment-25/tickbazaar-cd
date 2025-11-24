@@ -7,7 +7,7 @@ spec:
   hosts:
   - "*"
   gateways:
-  - istio-system/public-gateway
+  - apps/public-gateway
   http:
   
   - match:
