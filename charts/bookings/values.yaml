@@ -31,7 +31,7 @@ istio:
 
 env: 
   - "PORT": "4004"
-  - "SEAT_SERVICE_URL": http://seat-svc:4003
+  - "SEAT_SERVICE_URL": http://seat-app:4003
   - "LOKI_URL": http://loki-gateway.loki.svc.cluster.local
 
 secret_env:

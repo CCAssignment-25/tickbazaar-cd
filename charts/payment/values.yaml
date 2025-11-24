@@ -31,7 +31,7 @@ istio:
 
 env: 
   - "PORT": "4005"
-  - "BOOKING_SERVICE_URL": http://booking-svc:4004
+  - "BOOKING_SERVICE_URL": http://bookings-app:4004
   - "LOKI_URL": http://loki-gateway.loki.svc.cluster.local
 
 secret_env:
