@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: istio-config
+  namespace: argocd
+spec:
+  destination:
+    name: ''
+    namespace: apps
+    server: 'https://kubernetes.default.svc'
+  project: default
+  source:
+    repoURL: 'https://github.com/CCAssignment-25/tickbazaar-cd.git'
+    targetRevision: HEAD
+    path: manifests/istio
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
