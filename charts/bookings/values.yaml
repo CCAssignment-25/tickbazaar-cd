@@ -36,4 +36,4 @@ env:
 
 secret_env:
   "BOOKING_DATABASE_URL": "postgresql://postgres:$a+GF*eux<y>0(-{@34.93.218.184:5432/ticketbazaar_bookings?schema=public"
-  "INTERNAL_API_KEY": "yfbryggg4hg78y84hgj49gu4ugr3"
+  "INTERNAL_API_KEY": "yfbryggg4hg78y84hgj49gu4ug"
